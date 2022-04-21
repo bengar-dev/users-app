@@ -57,7 +57,7 @@ export default function ModalEditUser(props) {
         onClick={(e) => e.preventDefault(navigate('/'))}
         className='absolute top-5 right-5 text-rose-400 text-4xl'>X</button>
         <h1 className='text-2xl font-medium text-sky-300'>Editer {form.firstname}</h1>
-        <form className='flex flex-col'>
+        <form className='flex flex-col text-white'>
           <label htmlFor='firstname-edit'>Prénom</label>
           <input 
           value={form.firstname}
