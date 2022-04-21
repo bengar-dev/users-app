@@ -1,4 +1,5 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useRef} from 'react'
+import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext'
 
 import ModalEditUser from "../components/ModalEditUser";
@@ -30,9 +31,9 @@ export default function UsersList() {
             <p className='text-sky-300 text-sm'>{item.email}</p>
           </div>
           <div className='flex space-x-2 text-xs'>
-            <button
-            onClick={(e) => e.preventDefault(handleToggle())} 
-            className='text-orange-400'>Editer</button>
+            <Link
+            to={'/edit-user/' + item.id}
+            className='text-orange-400'>Editer</Link>
             <button 
             onClick={(e) => e.preventDefault(handleDelete(item.id))} 
             className='text-red-400'>Supprimer</button>

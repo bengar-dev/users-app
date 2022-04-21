@@ -1,6 +1,7 @@
-import Header from "./components/Header";
-import AddUser from "./components/AddUser";
-import UsersList from "./components/UsersList";
+import { Routes, Route } from "react-router-dom";
+
+import Home from './containers/Home'
+import ModalEdit from "./containers/ModalEdit";
 
 import UserContextProvider from "./context/UserContext";
 
@@ -8,9 +9,10 @@ function App() {
   return (
     <div className='min-h-screen bg-slate-900'>
       <UserContextProvider>
-        <Header />
-        <AddUser />
-        <UsersList />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/edit-user/:id' element={<ModalEdit />} />
+        </Routes>
       </UserContextProvider>
     </div>
   );
