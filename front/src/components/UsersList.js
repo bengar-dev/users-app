@@ -30,7 +30,7 @@ export default function UsersList() {
             <p>{item.lastname} {item.firstname}</p>
             <p className='text-sky-300 text-sm'>{item.email}</p>
           </div>
-          <div className='flex space-x-2 text-xs'>
+          <div className='flex items-center space-x-2 text-xs'>
             <Link
             to={'/edit-user/' + item.id}
             className='text-orange-400'>Editer</Link>
